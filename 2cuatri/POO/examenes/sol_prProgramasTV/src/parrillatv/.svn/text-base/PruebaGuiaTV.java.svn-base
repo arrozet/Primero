@@ -1,0 +1,42 @@
+package guiaTV;
+
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+
+public class PruebaGuiaTV {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		// Se crea un objeto ParrillaTV o ParrillaTVCompacta
+		ParrillaTV parrilla;
+		parrilla = crearParrilla("programacion.txt");
+		// parrilla = crearParrillaCompacta("programacion.txt");
+		
+		// Se muestra la información en la consola de salida
+		parrilla.mostrarParrilla(new PrintWriter(System.out,true));
+		// Se consulta la consistencia de la parrilla de "Cuatro", que debe ser true
+		System.out.println(parrilla.esConsistente("Cuatro"));
+		// Se consulta la consistencia de la parrilla de "LaSexta", que debe ser false
+		System.out.println(parrilla.esConsistente("LaSexta"));
+	}
+	
+	/**
+	 * Devuelve un objeto ParrillaTV a partir de la información almacenada 
+	 * en el fichero que se pasa como argumento
+	 * @return	Una ParrillaTV
+	 * @throws FileNotFoundException 
+	 */
+	private static ParrillaTV crearParrilla(String fichero) throws FileNotFoundException {
+		return new ParrillaTV(fichero);
+	}
+
+	/**
+	 * Devuelve un objeto ParrillaTVCompacta a partir de la información almacenada en el fichero
+	 * Para que se cree sin problema el fichero con la información debe ser consistente: eliminar la línea
+	 * 		LaSexta>La Sexta Deportes@21:00-40
+	 * @return Una ParrillaTVCompacta
+	 * @throws FileNotFoundException 
+	 */
+	private static ParrillaTV crearParrillaCompacta(String fichero) throws FileNotFoundException {		
+		return new ParrillaTVCompacta(fichero);
+	}
+}

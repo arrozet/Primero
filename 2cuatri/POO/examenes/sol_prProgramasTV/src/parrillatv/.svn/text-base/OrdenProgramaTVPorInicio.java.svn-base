@@ -1,0 +1,16 @@
+package guiaTV;
+
+import java.util.Comparator;
+
+/**
+ * Clase que define un orden alternativo para ProgramaTV, considerando que un programa
+ * es menor que otro cuando su hora de inicio es anterior.
+ * 
+ * @author POO
+ *
+ */
+public class OrdenProgramaTVPorInicio implements Comparator<ProgramaTV> {
+	public int compare(ProgramaTV prog1, ProgramaTV prog2) {
+		return prog1.getHoraInicio().compareTo(prog2.getHoraInicio());
+	}
+}

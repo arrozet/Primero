@@ -1,0 +1,3 @@
+// hacer el 22 y el 23 de la r3
+// 22. BUSCAR PATRON
+// 23. PRIMERA Y ULTIMA POSICION DE UNA PALABRA

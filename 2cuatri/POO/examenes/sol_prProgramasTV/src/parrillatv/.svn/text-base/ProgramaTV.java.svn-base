@@ -1,0 +1,109 @@
+package guiaTV;
+
+/**
+ * Clase que mantiene información sobre los datos de un programa de TV, consistentes en 
+ * el nombre del programa (de tipo String), la hora de inicio del programa (de tipo Hora) y la
+ * duración del mismo (en minutos, de tipo int).
+ * 
+ * @author POO
+ *
+ */
+public class ProgramaTV implements Comparable<ProgramaTV> {
+	/**
+	 * Nombre del programa
+	 */
+	private String nombrePrograma;
+	
+	/**
+	 * Hora de inicio del programa
+	 */
+	private Hora horaInicio;
+	
+	/**
+	 * Duración en minutos del programa
+	 */
+	private int duracion;
+	
+	/**
+	 * Constructor para crear un programa de TV a partir de su nombre, 
+	 * la hora de comienzo y la duración del mismo.
+	 * @param np	Nombre del programa (String)
+	 * @param hi	Hora de inicio (Hora)
+	 * @param dur	Duración en minutos
+	 */
+	public ProgramaTV(String np, Hora hi, int dur) {
+		// Si la duración es negativa se lanza una excepción
+		if (dur<0) throw new ProgramacionTVException("La duración del programa no puede ser negativa");
+		nombrePrograma = np;
+		horaInicio = hi;
+		duracion = dur;
+	}
+	
+	/**
+	 * Devuelve el nombre del programa
+	 * @return	Nombre del programa
+	 */
+	public String getNombrePrograma() {
+		return nombrePrograma;
+	}
+	
+	/**
+	 * Devuelve la duración del programa
+	 * @return	Duración del programa
+	 */
+	public int getDuracion() {
+		return duracion;
+	}
+	
+	/**
+	 * Devuelve la hora de inicio del programa
+	 * @return	Hora de inicio
+	 */
+	public Hora getHoraInicio() {
+		return horaInicio;
+	}
+	
+	/** 
+	 * Calcula la hora de finalización del programa, a partir de la hora de inicio y la duración.
+	 * @return	Hora de finalización del programa
+	 */
+	public Hora getHoraFin() {
+		int minutos = horaInicio.getMinuto() + duracion;
+		int hh = (horaInicio.getHora() + (minutos / 60)) % 24;
+		int mm = minutos % 60;
+		return new Hora(hh,mm);
+	}
+	
+	/**
+	 * Dos programas son iguales si tienen el mismo nombre y la misma hora de inicio.
+	 */
+	public boolean equals(Object o) {
+		boolean res = o instanceof ProgramaTV;
+		ProgramaTV prog = res? (ProgramaTV) o : null;
+		return res && nombrePrograma.equalsIgnoreCase(prog.nombrePrograma) &&
+					horaInicio.equals(prog.horaInicio);
+	}
+	
+	/**
+	 * El método hashCode se ha de redefinir para mantener la consistencia del método equals.
+	 */
+	public int hashCode() {
+		return nombrePrograma.toUpperCase().hashCode() + horaInicio.hashCode();
+	}
+	
+	/**
+	 * Un programa se considera menor que otro cuando su duración es menor.
+	 */
+	public int compareTo(ProgramaTV prog) {
+		return duracion - prog.duracion;
+	}
+	
+	/**
+	 * Representación textual de un programa dado por:
+	 * 		Nombre del programa @ hora de inicio
+	 */
+	public String toString() {
+		return nombrePrograma.toUpperCase() + "@" + horaInicio ;
+	}
+
+}

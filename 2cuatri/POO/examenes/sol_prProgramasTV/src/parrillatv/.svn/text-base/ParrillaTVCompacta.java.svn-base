@@ -1,0 +1,71 @@
+package guiaTV;
+
+import java.io.FileNotFoundException;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.SortedSet;
+
+/**
+ * Clase para representar parrillas de TV, donde los huecos entre programas, son rellanados por anuncios,
+ * considerados también instancias de la clase Programa.
+ * 
+ * @author POO
+ *
+ */
+public class ParrillaTVCompacta extends ParrillaTV {
+
+	/** 
+	 * Constructor para crear parrillas a partir de la información de un fichero, que se completa
+	 * con anuncios entre los huecos de los programas.
+	 * @param fichero	Nombre del fichero con la información de la parrilla
+	 * @throws FileNotFoundException
+	 */
+	public ParrillaTVCompacta(String fichero) throws FileNotFoundException {
+		super(fichero);
+		anyadirAnuncios();
+	}
+
+	/** 
+	 * Método auxiliar para añadir anuncios a la parrilla de todas las cadenas de TV.
+	 */
+	protected void anyadirAnuncios() {
+		for (String cadenaTV : canales.keySet()) 
+			anyadirAnuncios(cadenaTV);
+	}
+	
+	/**
+	 * Método auxiliar para añadir anuncios a una cadena determinada, proporcionada como parámetro.
+	 * Los anuncios se añaden como programas con la denominación "Publicidad", con hora de inicio, 
+	 * la hora de finalización del programa anterior, y con duración la necesaria para rellenar el 
+	 * hueco hasta la hora de inicio del programa siguiente. Los anuncios comienzan en la hora 00:00.
+	 * 
+	 * 
+	 * @param cadenaTV	Nombre de la cadena de TV
+	 */
+	protected void anyadirAnuncios(String cadenaTV) {
+		if (!esConsistente(cadenaTV)) throw new ProgramacionTVException("La parrilla incluye programas que se solapan en tiempo de emisión"); 
+		Hora horaInicio = new Hora(0,0);
+		Set<ProgramaTV> publicidad = new HashSet<ProgramaTV>();
+		for (ProgramaTV pr : canales.get(cadenaTV)) {
+			int duracion = horaInicio.diferenciaMinutos(pr.getHoraInicio());
+			if (duracion > 0) { // Solo se añaden anuncios si hay hueco
+				ProgramaTV anuncios = new ProgramaTV("Publicidad",horaInicio,duracion);
+				// No se puede añadir directamente la publicidad al map, porque 
+				// se produciría una excepción de modificación concurrente de la estructura
+				// anyadir(cadenaTV,anuncios); 
+				// Por ello, se van ñadiendo a un conjunto, para añadirlos a los canales al final.
+				// No obstante, no se penalizará una solución como esta.
+				publicidad.add(anuncios);
+			}
+			horaInicio = pr.getHoraFin();
+		}
+		// Añadimos todo el conjunto 
+		//SortedSet<ProgramaTV> programas = canales.get(cadenaTV);
+		//programas.addAll(publicidad);
+		for (ProgramaTV pr : publicidad) {
+			anyadir(cadenaTV,pr);
+		}
+	}
+	
+
+}

@@ -1,0 +1,226 @@
+#---------------------------------------------------------------------
+# C++
+#---------------------------------------------------------------------
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+#----
+#Java
+#----
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*
+
+#---------------------------------------------------------------------
+#R
+#---------------------------------------------------------------------
+# History files
+.Rhistory
+.Rapp.history
+
+# Session Data files
+.RData
+.RDataTmp
+
+# User-specific files
+.Ruserdata
+
+# Example code in package build process
+*-Ex.R
+
+# Output files from R CMD build
+/*.tar.gz
+
+# Output files from R CMD check
+/*.Rcheck/
+
+# RStudio files
+.Rproj.user/
+
+# produced vignettes
+vignettes/*.html
+vignettes/*.pdf
+
+# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
+.httr-oauth
+
+# knitr and R markdown default cache directories
+*_cache/
+/cache/
+
+# Temporary files created by R markdown
+*.utf8.md
+*.knit.md
+
+# R Environment Variables
+.Renviron
+
+# pkgdown site
+docs/
+
+# translation temp files
+po/*~
+
+# RStudio Connect folder
+rsconnect/
+
+#---------------------------------------------------------------------
+# Eclipse IDE
+#---------------------------------------------------------------------
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
+
+# CDT-specific (C/C++ Development Tooling)
+.cproject
+
+# CDT- autotools
+.autotools
+
+# Java annotation processor (APT)
+.factorypath
+
+# PDT-specific (PHP Development Tools)
+.buildpath
+
+# sbteclipse plugin
+.target
+
+# Tern plugin
+.tern-project
+
+# TeXlipse plugin
+.texlipse
+
+# STS (Spring Tool Suite)
+.springBeans
+
+# Code Recommenders
+.recommenders/
+
+# Annotation Processing
+.apt_generated/
+.apt_generated_test/
+
+# Scala IDE specific (Scala & Java development for Eclipse)
+.cache-main
+.scala_dependencies
+.worksheet
+
+# Uncomment this line if you wish to ignore the project description file.
+# Typically, this file would be tracked if it contains build/dependency configurations:
+#.project
+
+
+# Aditional resources
+/2cuatri/POO/ejerciciosT4-ROZ/.metadata
+/2cuatri/POO/ejerciciosT5-ROZ/.metadata
+/2cuatri/estadistica/rstudio/t2/javi
+/2cuatri/POO/.idea
+/2cuatri/POO/ejerciciosT2-ROZ/.metadata
+/2cuatri/POO/ejerciciosT2-ROZ/prEjercicio1Tema2/.settings
+/2cuatri/POO/ejerciciosT2-ROZ/libreria2/.settings
+/2cuatri/POO/ejerciciosT2-ROZ/prEjercicio2v2Tema2/.settings
+/2cuatri/POO/ejerciciosT2-ROZ/prEjercicio3Tema2/.settings
+/2cuatri/POO/ejerciciosT2-ROZ/prEjercicio4Tema2/.settings
+/2cuatri/POO/ejerciciosT2-ROZ/prLibreria/.settings
+/2cuatri/POO/ejerciciosT2-ROZ/prVacunas_parcial1/.settings
+/2cuatri/POO/ejerciciosT2/.metadata
+/2cuatri/POO/ejerciciosT3-ROZ/.metadata
+/2cuatri/POO/ejerciciosT3-ROZ/prDatos/.settings
+/2cuatri/POO/ejerciciosT4-ROZ/1prEjerciciosTema4/.settings
+/2cuatri/POO/ejerciciosT4-ROZ/2prEjerciciosTema4/.settings
+/2cuatri/POO/ejerciciosT4-ROZ/3prEjerciciosTema4/.settings
+/2cuatri/POO/ejerciciosT4-ROZ/4prEjerciciosTema4/.settings
+/2cuatri/POO/ejerciciosT4-ROZ/5prEjerciciosTema4/.settings
+/2cuatri/POO/ejerciciosT4-ROZ/P4_1-prNotas/.settings
+/2cuatri/POO/ejerciciosT4-ROZ/P4_1-prNotasInterfazMedia/.settings
+/2cuatri/POO/ejerciciosT4-ROZ/prCuentaPalabrasSimpleFicheros/.settings
+/2cuatri/POO/ejerciciosT4-ROZ/prKanban_21/.settings
+/2cuatri/POO/ejerciciosT6-ROZ/.metadata
+/2cuatri/POO/ejerciciosT6-ROZ/1prEjerciciosTema6/.settings
+/2cuatri/POO/ejerciciosT6-ROZ/2prEjerciciosTema6/.settings
+/2cuatri/POO/ejerciciosT6-ROZ/3prEjerciciosTema6/.settings
+/2cuatri/POO/ejerciciosT6-ROZ/4prEjerciciosTema6/.settings
+/2cuatri/POO/ejerciciosT6-ROZ/5prEjerciciosTema6/.settings
+/2cuatri/POO/ejerciciosT6-ROZ/P6_1-posicionamiento_web--Colecciones_y_ordenaciones/.settings
+/2cuatri/POO/ejerciciosT6-ROZ/P6_2-prIndicePalabras--Colecciones_correspondencias/.settings
+/2cuatri/POO/ejerciciosT6-ROZ/P6_3-prAlturas--Colecciones_correspondencias-ordenadas/.settings
+/2cuatri/POO/ejerciciosT6-ROZ/sol-1_2_3_4-EJ_T6/.settings
+/2cuatri/POO/ejerciciosT6-ROZ/solucion-P6_2/.settings
+/2cuatri/POO/examenes/.metadata
+/2cuatri/POO/examenes/prHospital/.settings
+/2cuatri/POO/examenes/prProgramasTV/.settings
+/2cuatri/POO/examenes/prRegistro/.settings
+/2cuatri/POO/examenes/prSociedadCreativa/.settings
+/2cuatri/POO/examenes/sol_prHospital/.settings
+/2cuatri/POO/examenes/sol_prMapaCOVID/.settings
+/2cuatri/POO/examenes/sol_prProgramasTV/.settings
