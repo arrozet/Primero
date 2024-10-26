@@ -1,0 +1,61 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 22.04.0 ] */
+/* [wxMaxima: title   start ]
+PREGUNTA 1
+   [wxMaxima: title   end   ] */
+
+
+/* [wxMaxima: comment start ]
+1. Define una función recursiva f(n,ℓ), en donde n es un número natural y ℓ es una lista de números naturales, que devuelva la lista que resulta de eliminar número n de ℓ. Por ejemplo, f(3,[3,2,3,7])=[2,7] y f(3,[1,5,2])=[1,5,2].
+
+Usar preferiblemente recursión de cola. Solo es necesario usar los operadores básicos de Maxima aprendidos en el tema: gcd(n,m) devuelve el máximo común divisor de n y m; primep(n) devuelve true si n es primo; first(l) es el primer elemento de una lista l; rest(l) son todos los elementos de l excepto el primer elemento; cons(a,l) añade el elemento a al principio de la lista l.
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+numero_out(n,l) := if n=last(l) then l else numero_out(n, rest(l));
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+numero_out(3, [2,3,7]);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: title   start ]
+PREGUNTA 2
+   [wxMaxima: title   end   ] */
+
+
+/* [wxMaxima: comment start ]
+2. 3. Compruebe con Maxima los cálculos intermedios y los resultados obtenidos.
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+cf(31/22);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+gcd(31,22);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+181/1;
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+[x,y]=matrix([181/1,k]) .
+matrix([0,1],[1,-4]) .
+matrix([0,1],[1,-2]) .
+matrix([0,1],[1,-2]) .
+matrix([0,1],[1,-1]);
+/* [wxMaxima: input   end   ] */
+
+
+
+/* Old versions of Maxima abort on loading files that end in a comment. */
+"Created with wxMaxima 22.04.0"$

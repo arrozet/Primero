@@ -1,0 +1,50 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 22.04.0 ] */
+/* [wxMaxima: comment start ]
+1. 
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+gcd(19,44);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+inv_mod(19,44);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+2. y 3.
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+gcd(56,44);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+gcd(3,11);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+inv_mod(3,11);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: input   start ] */
+chinese([11,19],[56,44]);lcm(56,44);
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Por tanto, tiene solución (sino chinese daría false, que significa sin solución) y esa solución es x congruente con 459(mod616)
+   [wxMaxima: comment end   ] */
+
+
+
+/* Old versions of Maxima abort on loading files that end in a comment. */
+"Created with wxMaxima 22.04.0"$
