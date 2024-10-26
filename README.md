@@ -8,7 +8,7 @@ The subjects tackled during this course are the following:
 
 ### First Semester:
 - *Calculus for Computing* (Cálculo para la Computación)
-- *Physics Foundations of Programming* (Fundamentos de Física de Informática)
+- *Physics Foundations of Programming* (Fundamentos Físicos de la Informática)
 - *Electronic Fundamentals of Informatics* (Fundamentos de Electrónica)
 - *Fundamentals of Programming* (Fundamentos de la Programación)
 - *Discrete Mathematics* (Matemática Discreta)
